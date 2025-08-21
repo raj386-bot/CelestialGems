@@ -16,7 +16,7 @@ interface CartItem {
   id: string;
   name: string;
   price: number;
-  image: string;
+  image?: string;
   quantity: number;
   type: "service" | "gemstone";
 }
@@ -25,12 +25,16 @@ interface CartDrawerProps {
   isOpen?: boolean;
   onClose?: () => void;
   items?: CartItem[];
+  onUpdateQuantity?: (id: string, quantity: number) => void;
+  onRemoveItem?: (id: string) => void;
 }
 
 const CartDrawer = ({
   isOpen = true,
   onClose = () => {},
   items = [],
+  onUpdateQuantity,
+  onRemoveItem,
 }: CartDrawerProps) => {
   const [cartItems, setCartItems] = useState<CartItem[]>(
     items.length
@@ -67,19 +71,30 @@ const CartDrawer = ({
   );
 
   const updateQuantity = (id: string, change: number) => {
-    setCartItems(
-      cartItems.map((item) => {
-        if (item.id === id) {
-          const newQuantity = Math.max(1, item.quantity + change);
-          return { ...item, quantity: newQuantity };
-        }
-        return item;
-      }),
+    const newQuantity = Math.max(
+      1,
+      cartItems.find((item) => item.id === id)?.quantity || 1 + change,
     );
+    if (onUpdateQuantity) {
+      onUpdateQuantity(id, newQuantity);
+    } else {
+      setCartItems(
+        cartItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: newQuantity };
+          }
+          return item;
+        }),
+      );
+    }
   };
 
   const removeItem = (id: string) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+    if (onRemoveItem) {
+      onRemoveItem(id);
+    } else {
+      setCartItems(cartItems.filter((item) => item.id !== id));
+    }
   };
 
   const subtotal = cartItems.reduce(
@@ -130,7 +145,9 @@ const CartDrawer = ({
               >
                 <div
                   className="w-20 h-20 rounded-md overflow-hidden flex-shrink-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${item.image})` }}
+                  style={{
+                    backgroundImage: `url(${item.image || "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=300&q=80"})`,
+                  }}
                 />
                 <div className="flex-1">
                   <div className="flex justify-between">

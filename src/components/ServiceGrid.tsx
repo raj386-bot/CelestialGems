@@ -24,9 +24,13 @@ interface Service {
 
 interface ServiceGridProps {
   services?: Service[];
+  onBookService?: (service: Service) => void;
 }
 
-const ServiceGrid = ({ services = defaultServices }: ServiceGridProps) => {
+const ServiceGrid = ({
+  services = defaultServices,
+  onBookService = () => {},
+}: ServiceGridProps) => {
   // Animation variants for the container
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -132,7 +136,10 @@ const ServiceGrid = ({ services = defaultServices }: ServiceGridProps) => {
                         ${service.price}
                       </div>
                     </div>
-                    <Button className="w-full mt-4 bg-[#008080] hover:bg-[#006666] text-white">
+                    <Button
+                      className="w-full mt-4 bg-[#008080] hover:bg-[#006666] text-white"
+                      onClick={() => onBookService(service)}
+                    >
                       Book Now
                     </Button>
                   </div>
