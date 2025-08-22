@@ -165,9 +165,12 @@ const GemstoneShop: React.FC<GemstoneProps> = ({
                         <h3 className="text-lg font-serif font-medium text-white">
                           {gemstone.name}
                         </h3>
-                        <span className="text-[#FFD700] font-bold">
-                          ${gemstone.price}
-                        </span>
+                        <div className="text-[#FFD700] font-bold text-right">
+                          <div>${gemstone.price}</div>
+                          <div className="text-xs text-gray-400">
+                            ₹{Math.round(gemstone.price * 83)}
+                          </div>
+                        </div>
                       </div>
                       <p className="text-gray-300 text-sm mb-3 line-clamp-2">
                         {gemstone.description}
@@ -247,9 +250,12 @@ const GemstoneShop: React.FC<GemstoneProps> = ({
                             <h3 className="text-xl font-serif font-medium text-white">
                               {gemstone.name}
                             </h3>
-                            <span className="text-[#FFD700] font-bold text-lg">
-                              ${gemstone.price}
-                            </span>
+                            <div className="text-[#FFD700] font-bold text-lg text-right">
+                              <div>${gemstone.price}</div>
+                              <div className="text-sm text-gray-400">
+                                ₹{Math.round(gemstone.price * 83)}
+                              </div>
+                            </div>
                           </div>
                           <p className="text-gray-300 mb-4">
                             {gemstone.description}
@@ -317,7 +323,7 @@ const defaultGemstones: GemstoneType[] = [
       "A powerful stone for spiritual growth and protection. Enhances intuition and promotes calm.",
     price: 129.99,
     image:
-      "https://images.unsplash.com/photo-1610631787813-9eeb1a2386cc?w=800&q=80",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
     planet: "jupiter",
     category: "crystal",
     weightCarat: 8.5,
@@ -330,7 +336,7 @@ const defaultGemstones: GemstoneType[] = [
       "The stone of unconditional love. Opens the heart chakra and attracts loving relationships.",
     price: 89.99,
     image:
-      "https://images.unsplash.com/photo-1596362601603-b74f6ef166e5?w=800&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80",
     planet: "venus",
     category: "semi-precious",
     weightCarat: 6.2,
@@ -343,7 +349,7 @@ const defaultGemstones: GemstoneType[] = [
       "Enhances wisdom, truth and self-awareness. Stimulates enlightenment and spiritual journey.",
     price: 149.99,
     image:
-      "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?w=800&q=80",
+      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
     planet: "saturn",
     category: "precious",
     weightCarat: 7.8,
@@ -356,7 +362,7 @@ const defaultGemstones: GemstoneType[] = [
       "Known as the merchant's stone. Attracts wealth, prosperity and success in business.",
     price: 119.99,
     image:
-      "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?w=800&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
     planet: "sun",
     category: "crystal",
     weightCarat: 5.4,
@@ -369,7 +375,7 @@ const defaultGemstones: GemstoneType[] = [
       "Balances emotions and enhances intuition. Connected to the divine feminine energy.",
     price: 199.99,
     image:
-      "https://images.unsplash.com/photo-1567394041060-768968993f03?w=800&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80",
     planet: "moon",
     category: "birthstone",
     weightCarat: 4.2,
@@ -382,7 +388,7 @@ const defaultGemstones: GemstoneType[] = [
       "A powerful protection stone that shields against negativity and clears psychic smog.",
     price: 79.99,
     image:
-      "https://images.unsplash.com/photo-1567394041060-768968993f03?w=800&q=80",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
     planet: "mars",
     category: "crystal",
     weightCarat: 9.0,
@@ -395,7 +401,7 @@ const defaultGemstones: GemstoneType[] = [
       "The master healer. Amplifies energy and thought, and connects to the higher self.",
     price: 69.99,
     image:
-      "https://images.unsplash.com/photo-1596362601603-b74f6ef166e5?w=800&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80",
     planet: "mercury",
     category: "crystal",
     weightCarat: 7.1,
@@ -408,7 +414,7 @@ const defaultGemstones: GemstoneType[] = [
       "Promotes loyalty, unconditional love, and stimulates the heart chakra.",
     price: 299.99,
     image:
-      "https://images.unsplash.com/photo-1551122087-f99a4ade46ce?w=800&q=80",
+      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
     planet: "venus",
     category: "precious",
     weightCarat: 3.8,

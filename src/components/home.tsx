@@ -234,8 +234,8 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-[#FFD700]/20 rounded-full blur-xl"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80"
-                    alt="Lead Astrologer"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                    alt="Shri Ananda Madhukar - Lead Astrologer"
                     className="w-64 h-64 object-cover rounded-full border-2 border-[#FFD700] relative z-10 mx-auto"
                   />
                 </div>
@@ -252,15 +252,16 @@ export default function Home() {
                   Meet Your Astrologer
                 </h2>
                 <h3 className="text-xl text-[#008080] mb-4">
-                  Seraphina Moonshadow
+                  Shri Ananda Madhukar
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  With over 15 years of experience in celestial navigation,
-                  Seraphina combines ancient wisdom with modern astrological
-                  techniques to provide profound insights into your cosmic
-                  blueprint. Her readings have guided thousands on their
-                  spiritual journeys, helping them align with their true
-                  purpose.
+                  With over 20 years of experience in Vedic astrology and
+                  spiritual guidance, Shri Ananda Madhukar combines ancient
+                  Sanskrit wisdom with intuitive insights to provide profound
+                  understanding of your cosmic blueprint. His readings have
+                  guided thousands on their spiritual journeys, helping them
+                  align with their dharmic purpose and navigate life's
+                  challenges.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-6">
                   <span className="px-3 py-1 bg-[#3E1F47] rounded-full text-sm">

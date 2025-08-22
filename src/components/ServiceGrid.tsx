@@ -132,8 +132,11 @@ const ServiceGrid = ({
                         <Clock className="h-4 w-4 mr-1" />
                         <span>{service.duration}</span>
                       </div>
-                      <div className="text-[#FFD700] font-semibold">
-                        ${service.price}
+                      <div className="text-[#FFD700] font-semibold text-right">
+                        <div>${service.price}</div>
+                        <div className="text-xs text-gray-400">
+                          ₹{Math.round(service.price * 83)}
+                        </div>
                       </div>
                     </div>
                     <Button
