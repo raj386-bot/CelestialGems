@@ -234,7 +234,7 @@ export default function Home() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-[#FFD700]/20 rounded-full blur-xl"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=IndianAstrologer&accessories=prescription02&accessoriesProbability=100&clothingColor=262e33&eyebrowType=default&eyeType=default&facialHairColor=2c1b18&facialHairType=moustacheMagnum&hairColor=2c1b18&hatColor=d08b5b&mouthType=default&skinColor=ae5d29&topType=turban&topColor=d08b5b"
                     alt="Shri Ananda Madhukar - Lead Astrologer"
                     className="w-64 h-64 object-cover rounded-full border-2 border-[#FFD700] relative z-10 mx-auto"
                   />
